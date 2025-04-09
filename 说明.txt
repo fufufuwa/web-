@@ -1,0 +1,53 @@
+本项目由by Datch维护
+
+注意事项：
+本包不包含各种插件，插件请自己整合安装
+为脚本执行便利，将Burpsuite原包名称统一重命名成burpsuite_pro_org.jar    存放在BurpSuite目录下，请自行核对MD5及SHA256
+0、所有目录不能有中文和特殊字符,且不要重命名（包括 - * / @ # ￥ % ^ & 等特殊字符）
+1、该目录下CN-JRE Burp.bat、EN-JRE Burp.bat的启动方式为免JAVA安装启动，仅能在windows下使用，且最好不要关闭CMD窗口！！！
+2、如果出现选择字符错位的情况下可以右键选择  显示设置---> 缩放与布局--->更改为100%即可。
+3、字符错位的情况下如不想调整缩放与布局可以在User option选项卡--->Display中--->User Interface的Font size和HTTP message display 调节字体
+   （Font size和HTTP message display可以为不同值，大约在13 14 15 16号字体即可解决）
+4、请先运行EN-JRE Burp.bat进行Burpsuite的注册再运行CN-JRE Burp.bat启动汉化
+5、VBS启动脚本为无CMD窗口启动，本质上是后台调用CN-JRE Burp.bat、EN-JRE Burp.bat两个其中一个启动脚本文件
+6、jre目录为openJDK的Win系统运行Java环境，可以自行更新成Win系统的其他版本。下载地址为http://jdk.java.net/archive/
+
+
+以下为常见的CMD变量。
+@echo off
+echo 当前盘符：%~d0
+echo 当前盘符和路径：%~dp0
+echo 当前批处理全路径：%~f0
+echo 当前盘符和路径的短文件名格式：%~sdp0
+echo 当前CMD默认目录：%cd%
+echo 目录中有空格也可以加入""避免找不到路径
+echo 当前盘符："%~d0"
+echo 当前盘符和路径："%~dp0"
+echo 当前批处理全路径："%~f0"
+echo 当前盘符和路径的短文件名格式："%~sdp0"
+echo 当前CMD默认目录："%cd%"
+
+
+Stable
+Early Adopter
+
+文件说明：
+！！！！！！为脚本执行便利，将Burpsuite原包名称统一重命名成burpsuite_pro_org.jar！！！！！！
+！！！！！！为脚本执行便利，将Burpsuite汉化包名称统一重命名成BurpSuiteChs.jar！！！！！！！！
+！！！！！！！！！！！！该目录内的启动方式需要安装并设置JRE环境！！！！！！！！！！！！！！！
+1、BurpSuiteLoader1.jar                                   keygen&loader
+2、burpsuitloader.jar                                        loader&keygen&汉化包
+3、burpsuite_pro_org.jar                                  BurpSuite原包(一般在290M以上，请自行验证MD5和SHA256)
+4、CNBurp.bat                                                  中文版CMD下带黑窗启动批处理
+5、CNBurpSuit.VBS                                           Windows下中文版无黑窗口中文版启动脚本
+6、CNLinuxCNStart.sh                                       Linux下BurpSuite中文版启动脚本（可能会有乱码）
+7、ENBurp.bat                                                   原版CMD下带黑窗启动批处理
+8、ENBurp.VBS                                                  Windows下英文原版无黑窗口中文版启动脚本
+9、ENLinuxStart.sh                                             Linux下BurpSuite原版启动脚本
+10、清除许可证.bat                                             清除burp的许可证
+
+burp原包下载地址https://portswigger.net/burp/releases
+为脚本执行便利，将Burpsuite汉化包名称统一重命名成BurpSuiteChs.jar，更换汉化包   删除或重命名   原来的BurpSuiteChs.jar，将新汉化包重命名成BurpSuiteChs.jar即可。
+
+Kali2020.4版本后去掉了java8环境，只能用java11及以上环境启动BurpSuiteLoader.jar
+Kali java的默认路径为：/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java,其他系统请自行更改java环境变量或者路径
